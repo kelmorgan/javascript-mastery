@@ -1,23 +1,17 @@
 
 
 function showPrimes(limit) {
-
-    for (number = 2; number <= limit; number++) {
-
+    for (number = 2; number <= limit; number++)
         if (isPrime(number)) console.log(number);
-
-    }
 }
 
 function isPrime(number) {
-    let isPrime = true;
-    for (let factor = 2; factor < number; factor++) {
+    for (let factor = 2; factor < number; factor++)
         if (number % factor === 0)
-            isPrime = false;
-        break;
-    }
-    return isPrime;
+            return false;
+
+    return true;
 }
 
 
-showPrimes(20);
+showPrimes(80);
