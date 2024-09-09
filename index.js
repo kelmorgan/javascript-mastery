@@ -1,31 +1,22 @@
 
 
-
-
-
-function createCircle(raduis) {
-    return {
-        raduis,
-        draw() {
-            console.log('draw')
-
-        }
-    }
-}
-
-
-const circle1 = createCircle(1);
-
-
-console.log(circle1);
-
-
-
-function Circle(radius) {
-    this.radius = radius;
-    this.draw = function () {
+const circle = {
+    raduis: 1,
+    draw() {
         console.log('draw');
     }
 }
 
-const circle = new Circle(1);
+
+// const another = {};
+// for (let key in circle)
+//     another[key] = circle[key];
+
+
+//const another = Object.assign({}, circle);
+
+
+const another = { ...circle }
+
+
+console.log(another);
