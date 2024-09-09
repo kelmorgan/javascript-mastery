@@ -1,22 +1,39 @@
 
+const address = new Address('a', 'b', 'c')
 
-const circle = {
-    raduis: 1,
-    draw() {
-        console.log('draw');
+
+//factory function
+
+console.log(address)
+
+
+function createAddress(street, city, zipCode) {
+    return {
+        street,
+        city,
+        zipCode
     }
 }
 
 
-// const another = {};
-// for (let key in circle)
-//     another[key] = circle[key];
+//Constructor function
+
+function Address(street, city, zipCode) {
+    this.street = street;
+    this.city = city;
+    this.zipCode = zipCode;
+}
 
 
-//const another = Object.assign({}, circle);
 
 
-const another = { ...circle }
+
+function showAddress(address) {
+
+    for (key in address)
+        console.log(key, address[key]);
+
+}
 
 
-console.log(another);
+showAddress(address);
