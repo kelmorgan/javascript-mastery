@@ -1,39 +1,19 @@
 
-const address = new Address('a', 'b', 'c')
 
+const blogPost = new Post('a', 'b', 'c');
 
-//factory function
-
-console.log(address)
-
-
-function createAddress(street, city, zipCode) {
-    return {
-        street,
-        city,
-        zipCode
-    }
+function Post(title, body, author) {
+    this.title = title;
+    this.body = body;
+    this.author = author;
+    this.views = 0;
+    this.comments = [];
+    this.isLive = false
 }
 
 
-//Constructor function
-
-function Address(street, city, zipCode) {
-    this.street = street;
-    this.city = city;
-    this.zipCode = zipCode;
-}
+console.log(blogPost)
 
 
 
 
-
-function showAddress(address) {
-
-    for (key in address)
-        console.log(key, address[key]);
-
-}
-
-
-showAddress(address);
