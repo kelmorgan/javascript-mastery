@@ -8,6 +8,7 @@ function createCircle(raduis) {
         raduis,
         draw() {
             console.log('draw')
+
         }
     }
 }
