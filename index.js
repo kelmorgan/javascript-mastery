@@ -1,18 +1,15 @@
 
 
-const blogPost = new Post('a', 'b', 'c');
+let priceRangers = [
+    { label: '$', tooltip: 'Inexpensive', minPerPerson: 0, maxPerPerson: 10 },
+    { label: '$$', tooltip: 'Moderate', minPerPerson: 11, maxPerPerson: 20 },
+    { label: '$$$', tooltip: 'Expensive', minPerPerson: 21, maxPerPerson: 50 },
 
-function Post(title, body, author) {
-    this.title = title;
-    this.body = body;
-    this.author = author;
-    this.views = 0;
-    this.comments = [];
-    this.isLive = false
-}
+]
 
-
-console.log(blogPost)
+let resturants = [
+    { averagePerPerson: 5 }
+]
 
 
 
