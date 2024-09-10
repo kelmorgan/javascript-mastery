@@ -1,9 +1,16 @@
 
 
-const numbers = [1, 2, 3, 4, 5];
 
 
+const array = arrayFromRange(-8, 1);
 
-const sum = numbers
-    .reduce((accumulator, currentValue) => accumulator + currentValue);
-console.log(sum)
+console.log(array);
+
+function arrayFromRange(min, max) {
+    const array = [];
+
+    while (!array.includes(max))
+        array.push(min++);
+
+    return array;
+}
