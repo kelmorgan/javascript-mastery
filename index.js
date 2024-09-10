@@ -1,28 +1,19 @@
 
 
-const numbers = [1, 2, 3, 9, 5, 2, 711, 20, 90];
-
-const count = getMax(numbers);
-
-console.log(count);
-
-
-// function getMax(array) {
-
-//     if (array.length === 0) return undefined;
-
-//     let max = array[0];
-
-//     for (let i = 1; i < array.length; i++)
-//         if (array[i] > max)
-//             max = array[i];
-//     return max;
-// }
+const movies = [
+    { title: 'a', year: 2018, rating: 4.5 },
+    { title: 'b', year: 2018, rating: 4.7 },
+    { title: 'c', year: 2018, rating: 3 },
+    { title: 'd', year: 2017, rating: 4.5 }
+];
 
 
-function getMax(array) {
 
-    if (array.length === 0) return undefined;
+const values = movies
+    .filter(movie => movie.year === 2018 && movie.rating >= 4)
+    .sort((a, b) => a.rating - b.rating)
+    .reverse()
+    .map(movie => movie.title);
 
-    return array.reduce((a, b) => (a > b) ? a : b);
-}
+
+console.log(values)
