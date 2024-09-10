@@ -2,17 +2,21 @@
 
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-const output = except(numbers, [1, 5]);
+const output = move(numbers, 6, -1);
 
 console.log(output);
 
-function except(array, excluded) {
-    const output = [];
+function move(array, index, offset) {
+    const position = index + offset;
 
-    for (let element of array)
-        if (!excluded.includes(element))
-            output.push(element);
+    if (position >= array.length || position < 0) {
+        console.error('Invalid Offset.')
+        return;
+    }
+
+    const output = [...array];
+    const element = output.splice(index, 1)[0];
+    output.splice(index + offset, 0, element)
 
     return output;
-
 }
