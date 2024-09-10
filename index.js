@@ -1,9 +1,12 @@
 
-const courses = [
-    { id: 1, name: 'a' },
-    { id: 2, name: 'b' }
-]
 
-const course = courses.find(course => course.name === 'a')
+const numbers = [1, 2, 3, 4, 5];
+const numbers2 = [6, 7, 8];
 
-console.log(course)
+
+//const combine = numbers.concat(numbers2);
+const combine = [...numbers, ...numbers2];
+
+
+
+combine.forEach(number => console.log(number))
