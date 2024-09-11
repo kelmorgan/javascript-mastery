@@ -1,7 +1,25 @@
-function sum(discount, ...args) {
+const person = {
+    firstName: 'Kufre',
+    lastName: 'Udoko',
 
-    console.log(args.reduce((a, b) => a + b) * (1 - discount));
+    get fullName() {
+        return `${person.firstName} ${person.lastName}`;
+    },
+    set fullName(value) {
 
-}
+        const parts = value.split(' ');
+        this.firstName = parts[0];
+        this.lastName = parts[1];
 
-sum(0.1, 1, 2, 3, 4, 5, 6, 7, 8, 9)
+    }
+};
+
+
+person.fullName = 'Mosh Smith'
+
+
+
+
+console.log(person)
+
+
